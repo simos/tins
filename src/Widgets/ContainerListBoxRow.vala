@@ -57,7 +57,7 @@ public class Tins.Widgets.ContainerListBoxRow : Gtk.ListBoxRow {
 
     construct {
         logo_box.toggle_state.connect ((new_state) => {
-            toggle_enable (instance, new_state == ContainerLogoBox.ENABLED);
+            toggle_enable (instance, new_state == ContainerLogoBox.State.ENABLED);
         });
         notify["instance"].connect (update_request);
         update_request ();
